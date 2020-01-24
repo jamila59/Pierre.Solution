@@ -4,21 +4,32 @@ using System.Collections.Generic;
 using System.Linq;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
+using System.Threading.Tasks;
+using System.Security.Claims;
+
 
 namespace Pierre.Controllers
 {
+  [Authorize]
   public class FlavorsController : Controller
   {
     private readonly PierreContext _db;
+    private readonly UserManager<ApplicationUser> _userManager;
 
-    public FlavorsController(PierreContext db)
+    public FlavorsController(UserManager<ApplicationUser> userManager, PierreContext db)
     {
+      _userManager = userManager;
       _db = db;
     }
 
-    public ActionResult Index()
+    public async Task<ActionResult> Index()
     {
-      return View(_db.Flavors.ToList());
+    var userId = this.User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+    var currentUser = await _userManager.FindByIdAsync(userId);
+    var userFlavors = _db.Flavors.Where(entry => entry.User.Id == currentUser.Id);
+    return View(userFlavors);
     }
     public ActionResult Create()
     {
