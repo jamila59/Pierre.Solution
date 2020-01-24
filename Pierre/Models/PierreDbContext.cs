@@ -1,8 +1,8 @@
 using Microsoft.EntityFrameworkCore;
 
-namespace ToDoList.Models
+namespace Pierre.Models
 {
-  public class ToDoListContext : DbContext
+  public class PierreContext : DbContext
   {
     public virtual DbSet<Flavor> Flavors { get; set; }
     public DbSet<Treat> Treats { get; set; }
