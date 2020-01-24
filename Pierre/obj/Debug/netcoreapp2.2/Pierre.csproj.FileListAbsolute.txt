@@ -38,4 +38,6 @@
 /Users/Guest/Desktop/Pierre.Solution/Pierre/obj/Debug/netcoreapp2.2/Pierre.dll
 /Users/Guest/Desktop/Pierre.Solution/Pierre/obj/Debug/netcoreapp2.2/Pierre.pdb
 /Users/Guest/Desktop/Pierre.Solution/Pierre/obj/Debug/netcoreapp2.2/Pierre.csproj.CopyComplete
-/Users/Guest/Desktop/Pierre.Solution/Pierre/obj/Debug/netcoreapp2.2/Razor/Views/Flavors/AddCategory.g.cshtml.cs
+/Users/Guest/Desktop/Pierre.Solution/Pierre/obj/Debug/netcoreapp2.2/Razor/Views/Flavors/AddTreat.g.cshtml.cs
+/Users/Guest/Desktop/Pierre.Solution/Pierre/obj/Debug/netcoreapp2.2/Razor/Views/Account/Index.g.cshtml.cs
+/Users/Guest/Desktop/Pierre.Solution/Pierre/obj/Debug/netcoreapp2.2/Razor/Views/Account/Register.g.cshtml.cs

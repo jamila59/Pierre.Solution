@@ -3026,6 +3026,16 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "/Users/Guest/Desktop/Pierre.Solution/Pierre/Views/Account/Index.cshtml",
+      "TargetPath": "Views/Account/Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/Guest/Desktop/Pierre.Solution/Pierre/Views/Account/Register.cshtml",
+      "TargetPath": "Views/Account/Register.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "/Users/Guest/Desktop/Pierre.Solution/Pierre/Views/Flavors/Edit.cshtml",
       "TargetPath": "Views/Flavors/Edit.cshtml",
       "FileKind": "mvc"
