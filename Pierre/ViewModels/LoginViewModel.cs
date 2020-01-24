@@ -1,4 +1,4 @@
-namespace ToDoList.ViewModels
+namespace Pierre.ViewModels
 {
     public class LoginViewModel
     {
