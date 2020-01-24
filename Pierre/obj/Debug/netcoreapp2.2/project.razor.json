@@ -3031,6 +3031,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "/Users/Guest/Desktop/Pierre.Solution/Pierre/Views/Flavors/AddTreat.cshtml",
+      "TargetPath": "Views/Flavors/AddTreat.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "/Users/Guest/Desktop/Pierre.Solution/Pierre/Views/Flavors/Delete.cshtml",
       "TargetPath": "Views/Flavors/Delete.cshtml",
       "FileKind": "mvc"
