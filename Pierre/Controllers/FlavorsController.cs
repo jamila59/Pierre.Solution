@@ -62,19 +62,41 @@ namespace Pierre.Controllers
         _db.SaveChanges();
         return RedirectToAction("Index");
     }
-    public ActionResult AddCategory(int id)
+    public ActionResult AddTreat(int id)
     {
         var thisFlavor = _db.Flavors.FirstOrDefault(flavors => flavors.FlavorId == id);
         ViewBag.TreatId = new SelectList(_db.Treats, "TreatId", "Name");
         return View(thisFlavor);
     }
-    [HttpPost]
+    [HttpPost, ActionName("AddTreat")]
     public ActionResult AddTreat(Flavor flavor, int TreatId)
     {
         if (TreatId != 0)
         {
         _db.FlavorTreat.Add(new FlavorTreat() { TreatId = TreatId, FlavorId = flavor.FlavorId });
         }
+        _db.SaveChanges();
+        return RedirectToAction("Index");
+    }
+    public ActionResult Delete(int id)
+    {
+        var thisFlavor = _db.Flavors.FirstOrDefault(flavors => flavors.FlavorId == id);
+        return View(thisFlavor);
+    }
+
+    [HttpPost, ActionName("Delete")]
+    public ActionResult DeleteConfirmed(int id)
+    {
+        var thisFlavor = _db.Flavors.FirstOrDefault(flavors => flavors.FlavorId == id);
+        _db.Flavors.Remove(thisFlavor);
+        _db.SaveChanges();
+        return RedirectToAction("Index");
+    }
+    [HttpPost]
+    public ActionResult DeleteTreat(int joinId)
+    {
+        var joinEntry = _db.FlavorTreat.FirstOrDefault(entry => entry.FlavorTreatId == joinId);
+        _db.FlavorTreat.Remove(joinEntry);
         _db.SaveChanges();
         return RedirectToAction("Index");
     }
