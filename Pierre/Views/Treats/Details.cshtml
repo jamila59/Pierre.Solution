@@ -4,7 +4,7 @@
 
 @model Pierre.Models.Treat;
 
-<h2>Treats Details</h2>
+<h2>Details</h2>
 <hr />
 <h3>@Html.DisplayNameFor(model => model.Name): @Html.DisplayFor(model => model.Name)</h3>
 
@@ -14,7 +14,7 @@
 }
 else
 {
-  <h4>Flavors the treat contains:</h4>
+  <h4>Flavors:</h4>
   <ul>
   @foreach(var join in Model.Flavors)
   {
