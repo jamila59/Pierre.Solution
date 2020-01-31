@@ -11,18 +11,15 @@ A C# program with an implemented many-to-many relationships through Entity. In t
 
 ## Setup/Installation Requirements
 
-1. Open command line and clone this repository to Desktop:
-    ```
-    $ git clone https://github.com/Jamila59/Order.Solution.git
-    ```
-2. In command line:
-    ```
-    $ dotnet build 
-    ```
-    dotnet run
-    ```
-    dotnet watch run
-    ```
+1. Open https://github.com/Jamila59/Order.Solution.git
+2. Clone repository to local machine (git clone <repoName>)
+3. Navagate to the project directory 
+4. $ dotnet restore
+5. $ dotnet build 
+6. dotnet ef migrations add Initial 
+7. dotnet ef database update
+8. $ dotnet run 
+
 
 ## Known Bugs
 * No known bugs at this time.

@@ -31,6 +31,7 @@ namespace Pierre.Controllers
       var userFlavors = _db.Flavors.Where(entry => entry.User.Id == currentUser.Id);
       return View(userFlavors);
     }
+    [Authorize]
     public ActionResult Create()
     {
         ViewBag.TreatId = new SelectList(_db.Treats, "TreatId", "Name");
@@ -59,6 +60,7 @@ namespace Pierre.Controllers
           .FirstOrDefault(flavor => flavor.FlavorId == id);
       return View(thisFlavor);
     } 
+    [Authorize]
     public ActionResult Edit(int id)
     {
         var thisFlavor = _db.Flavors.FirstOrDefault(flavors => flavors.FlavorId == id);
@@ -92,6 +94,7 @@ namespace Pierre.Controllers
         _db.SaveChanges();
         return RedirectToAction("Index");
     }
+    [Authorize]
     public ActionResult Delete(int id)
     {
         var thisFlavor = _db.Flavors.FirstOrDefault(flavors => flavors.FlavorId == id);
